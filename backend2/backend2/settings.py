@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import datetime
+
+#下面两行用于token配置
+SECRET_KEY = "123456"  # 确保保密
+JWT_EXPIRATION_DELTA = datetime.timedelta(days=1)  # Token 过期时间
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
